@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clear</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+  </head>
+  <body>
+    <h1>Welcome to Clear!</h1>
+    <div
+      id="camdemo"
+      style="width: 320px; height: 240px; text-align: center; margin: 0 auto;"
+    ></div>
+    <br />
+    <div style="text-align: center;">
+      <input type="button" id="start" value="Start / Shut down camera" />
+    </div>
+  </body>
+  <script>
+    let enabled = false;
+    const WebCamera = require("webcamjs");
+    document.getElementById("start").addEventListener(
+      "click",
+      function () {
+        if (!enabled) {
+          enabled = true;
+          WebCamera.attach("#camdemo");
+          console.log("The camera has been started");
+        } else {
+          enabled = false;
+          WebCamera.reset();
+          console.log("The camera has been disabled");
+        }
+      },
+      false
+    );
+  </script>
+</html>

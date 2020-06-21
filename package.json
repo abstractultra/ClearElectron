@@ -1,0 +1,18 @@
+{
+  "name": "ClearElectron",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "-",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.0.4",
+    "eslint": "^7.3.0",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "webcamjs": "^1.0.26"
+  }
+}
